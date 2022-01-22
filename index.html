@@ -1,1 +1,59 @@
-<h1>Hello Shahroz</h1>
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Contact Picker API</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Contact_Picker_API" target="_blank" class="text-blue-500 underline m-2 text-xl font-bold">Contact Picker API</a>
+    <section class="flex flex-col w-full font-mono p-2">
+      <div id="not-supported-section" class="hidden w-full px-2 py-3 bg-red-200 text-red-700 rounded">
+        <div class="font-semibold">Not Supported</div>
+        <div class="my-2">
+          Contact Picker api is not supported in your browser.
+        </div>
+      </div>
+      <div id="contact-picker-section" class="hidden my-2">
+        <div class="border border-slate-200 w-full p-2 rounded">
+          <div class="font-semibold">Properties Supported</div>
+          <span id="prop-supported-name" class="">name: </span>|
+          <span id="prop-supported-email" class="">email: </span>|
+          <span id="prop-supported-tel" class="">tel: </span>|
+          <span id="prop-supported-address" class="">address: </span>|
+          <span id="prop-supported-icon" class="">icon: </span>
+        </div>
+        <div class="border border-slate-200 w-full p-2 rounded my-2" id='customize'>
+          <div class="font-semibold">Customize Options</div>
+          <label id="prop-supported-name" class="cursor-pointer"><input type="checkbox" name="name" id="checkbox-name">name </label>
+          <label id="prop-supported-email" class="cursor-pointer"><input type="checkbox" name="email" id="checkbox-email">email </label>
+          <label id="prop-supported-tel" class="cursor-pointer"><input type="checkbox" name="tel" id="checkbox-tel">tel </label>
+          <label id="prop-supported-address" class="cursor-pointer"><input type="checkbox" name="address" id="checkbox-address">address </label>
+          <label id="prop-supported-icon" class="cursor-pointer"><input type="checkbox" name="icon" id="checkbox-icon">icon </label>
+          <div>
+            <label id="prop-supported-name" class="cursor-pointer"><input type="checkbox" name="multiple" id="multiple">multiple </label>
+          </div>
+        </div>
+        <button id="contact-picker-button" class="border-solid border-blue-800 bg-blue-600 text-white p-2 my-2">
+          Access Phonebook
+        </button>
+      </div>
+      <div id="output" class="my-2 border border-slate-200 w-full p-2 rounded">
+
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
